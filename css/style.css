@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.total {
+  height: 100%;
+
+  display: flex;
+}
+
+.sidebar {
+  position: absolute;
+  width: 4vw;
+  height: 100vh;
+  background-color: #110066;
+  transition-duration: 0.8s;
+}
+
+.sidebar ul {
+  height: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  overflow-x: hidden;
+}
+
+.sidebar ul li{
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul li .icon{
+  font-size: 2rem;
+  color: #EAEAEA;
+  transition-duration: 0.8s;
+}
+
+.sidebar ul li .li-name{
+  display: none;
+}
+
+/* Menu Hamburguer */
+.menu-hamburguer{
+  position: absolute;
+  top: 10px;
+  right: -50px;
+  width: 40px;
+}
+
+.menu-hamburguer div{
+  background-color: #110066;
+  border-radius: 5px;
+  margin: 6px auto;
+  height: 5px;
+  transition-duration: 0.5s;
+}
+
+/* Sidebar ativo */
+.sidebar.active{
+  padding: 10px;
+  width: 14vw;
+}
+
+.sidebar.active ul{
+  gap: 1.5rem;
+  align-items: baseline;
+}
+
+.sidebar.active ul li .li-name{
+  display: block;
+  color: #EAEAEA;
+  font-size: 1.5rem;
+}
+
+.sidebar.sidebar.active .menu-hamburguer .one{
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.sidebar.sidebar.active .menu-hamburguer .two{
+  opacity: 0;
+}
+
+.sidebar.sidebar.active .menu-hamburguer .three{
+  transform: rotate(-45deg) translate(8px, -9px);
+}
